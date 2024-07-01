@@ -1,0 +1,105 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+006     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020-029 dht_dat
+02A     isi
+02B     nem
+02C     @PRINTF_D0_577.P1
+02C     lcd_init.i
+02C     read_dht.GlobalErr
+02C     MAIN.@SCRATCH1
+02D     @PRINTF_D0_577.P1
+02D     read_dht.dht_in
+02D     lcd_init.@SCRATCH1
+02E     read_dht.i
+02E     @PRINTF_D0_577.@SCRATCH1
+02F     read_dht.dht_check_sum
+02F     @PRINTF_D0_577.@SCRATCH2
+030     read_dht.@SCRATCH1
+030     @PRINTF_D0_577.@SCRATCH3
+031     read_dht.@SCRATCH2
+031     @PRINTF_D0_577.@SCRATCH4
+032     @DIV88.P1
+032     lcd_putc.c
+032     leer_dht_dat.i
+033     @delay_ms1.P1
+033     @DIV88.P2
+033     leer_dht_dat.result
+033     lcd_gotoxy.x
+034     lcd_gotoxy.y
+034     leer_dht_dat.@SCRATCH1
+034     @DIV88.@SCRATCH1
+035     lcd_gotoxy.address
+036     lcd_gotoxy.@SCRATCH1
+037     lcd_send_byte.address
+038     lcd_send_byte.n
+039     lcd_read_byte.low
+039     lcd_send_byte.@SCRATCH1
+03A     lcd_send_nibble.n
+03A     lcd_read_byte.high
+03B     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const598.call
+00001D  @const599.call
+00002F  @const606.call
+000041  @delay_ms1
+000056  lcd_send_nibble
+000062  lcd_send_byte
+000063  lcd_read_byte
+00009C  lcd_init
+0000C6  lcd_gotoxy
+0000D8  lcd_putc
+0000FC  read_dht
+0000FD  dht_init
+000145  leer_dht_dat
+000180  @DIV88
+000195  @PRINTF_D0_577
+0001EC  MAIN
+0001EC  @cinit1
+0001F1  @cinit2
+
+Project Directory:
+    C:\Users\Furkan\Desktop\ýsý nem\
+
+Project Files:
+    dht11.c                                                 [17-Ara-22 23:30  CRC=6AFF1682]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h  [12-Kas-13 14:34  CRC=44569924]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd1.c     [17-Ara-22 23:23  CRC=EE70690B]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\DHT-11.c   [17-Ara-22 23:22  CRC=E7080F91]
+
+Source signature=6BD637D3
+
+Units:
+    dht11 (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   dht11.xsym
+    Errors:      dht11.err
+    Ext Symbols: dht11.esym
+    INHX8:       dht11.hex
+    Symbols:     dht11.sym
+    List:        dht11.lst
+    Debug/COFF:  dht11.cof
+    Project:     dht11.ccspjt
+    Call Tree:   dht11.tre
+    Statistics:  dht11.STA

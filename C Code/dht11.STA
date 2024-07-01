@@ -1,0 +1,62 @@
+
+ROM used:   578/2048 (28%)
+            578/2048 (28%) including unused fragments
+
+            0.7 Average locations per line
+            5.2 Average locations per statement
+
+RAM used:   18/224 (8%) at main() level
+            33/224 (15%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   29    14  13  dht11.c
+  518     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h
+  180    63  57  ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd1.c
+   76    34  31  ..\..\..\..\Program Files (x86)\PICC\Drivers\DHT-11.c
+----- -----
+  803   111 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   4    1             @delay_ms1
+0      8   1    0             @const556
+ Inline         3   463  4.3  lcd_read_byte
+0     12   2    1   134  2.2  lcd_send_nibble
+0     58  10    3   317  4.3  lcd_send_byte
+0     42   7    2   422  4.7  lcd_init
+0     18   3    4   186  5.5  lcd_gotoxy
+0     36   6    1   272  4.1  lcd_putc
+ Inline         0    32  1.0  dht_init
+ Inline         3   356  6.8  leer_dht_dat
+0    132  23    6   575  5.6  read_dht
+0     86  15    1   377  3.2  MAIN
+0     17   3    0             @const598
+0     18   3    0             @const599
+0     21   4    3             @DIV88
+0     87  15    6             @PRINTF_D0_577
+0     18   3    0             @const606
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              111
+    Comments                154
+    Volume (V)              5017
+    Difficulty (D)          40.6
+    Effort to implement (E) 203768
+    Time to implement (T)   3 hours, 9 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   12
+    Maintainability (MI)    89
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   574  1470  
+
+
+

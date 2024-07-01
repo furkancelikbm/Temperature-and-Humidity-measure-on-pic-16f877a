@@ -1,0 +1,5 @@
+>>> Warning 203 "dht11.c" Line 13(1,1): Condition always TRUE
+>>> Warning 202 "C:\Program Files (x86)\PICC\Drivers\DHT-11.c" Line 44(10,23): Variable never used:   dht_check_sum
+      Memory usage:   ROM=28%      RAM=8% - 15%
+      0 Errors,  2 Warnings.
+Build Successful.
